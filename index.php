@@ -95,7 +95,7 @@
             </li>
             <li class="list-inline-item">&sdot;</li>
             <li class="list-inline-item">
-              <a href="contact.php">Contact</a>
+              <a href="#">+234 (0)81 679 27876</a>
             </li>
             
             <li class="list-inline-item">&sdot;</li>
