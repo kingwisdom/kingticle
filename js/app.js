@@ -28,7 +28,7 @@ let app = new Vue({
             return dt
         },
         getAllArticles: function() {
-            axios.get('http://localhost/kingticle/api.php?action=read')
+            axios.get('http://kingticle.delinksproperty.com/api.php?action=read')
             .then(function(response){
                 // console.log(response)
                 if(response.data.error){
@@ -42,7 +42,7 @@ let app = new Vue({
         saveArticle: function() {
             // console.log(app.newArticle)
             let formData = app.toFormData(app.newArticle)
-            axios.post('http://localhost/kingticle/api.php?action=create', formData)
+            axios.post('http://kingticle.delinksproperty.com/api.php?action=create', formData)
             .then(function(response){
                 console.log(response);
                 app.newArticle = {title:"",body_url:"",image_url:""}
