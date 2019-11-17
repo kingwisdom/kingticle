@@ -25,8 +25,9 @@
   <style>
     .title a:hover{
       text-decoration: none;
-      color: green;
+      color: #4d0e02;
       text-align: center;
+      transition: .5s ease-in-out;
     }
   </style>
 
@@ -63,15 +64,17 @@
 
       <div class="row">
       
-        <div class="col-lg-4" v-for="article in articles">
+        <div class="col-lg-3" v-for="article in articles">
+          <div class="card card-body">
           <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
 
-          <img v-if="article.image_url" class="img-fluid rounded-circle mb-3" :src="article.image_url" alt="">
-          <img v-else class="img-fluid rounded-circle mb-3" src="img/noimage.png" alt="">
+          <img v-if="article.image_url" class="img-fluid rounded-circle mb-3" :src="article.image_url" alt="" style="height:200px; width:200px;">
+          <img v-else class="img-fluid rounded-circle mb-3" src="img/noimage.png" alt=""  style="height:200px; width:200px;">
             <h4 class="title"><a target="_blank" :href="article.body_url">{{article.title}}</a></h4>
             <p>Date:  {{formatDate(article.created_at)}} </p>
-            <small class="mb-0">Source: {{ article.body_url }}</small>
+            
           </div>
+        </div>
         </div>
 
        
